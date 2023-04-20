@@ -1,0 +1,843 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <style >
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .prev {
+        margin-left: 28%;
+    }
+
+    .next {
+        margin-right: 23%;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgb(128 128 128);
+        }
+
+    /* Caption text */
+    .text {
+        color: black;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        // vertical-align: middle;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+        .active, .dot:hover {
+            background-color: black;
+        }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next, .text {
+            font-size: 11px
+        }
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next, .text {
+            font-size: 11px
+        }
+    }
+
+    ---------------------------image above footer--------------
+    .z {
+        background-image: url("images/bedimagee.png");
+    }
+
+    -----------------------slideshow------------------
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        position: relative;
+        width: 50%;
+        max-width: 300px;
+    }
+
+    /*  .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        */
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(211,211,211);
+        background: rgb(211,211,211); /* Black see-through */
+        color: black;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: black;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #38444d;
+    }
+
+    li {
+        float: left;
+    }
+
+    li2 {
+        float: inherit;
+    }
+
+    button {
+        display: inline-block;
+        background-color: #38444d;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: white;
+    }
+
+    button1 {
+        float: right;
+    }
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    link {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: lightgrey;
+    }
+
+    li.dropdown {
+        display: inline;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    -------------------footer---------------
+    /* REMOVE THIS, USE YOUR OWN  */
+    /*  html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, Sans-serif;
+            background-color: #070617;
+        }*/
+    .dummy_page {
+        height: 200px;
+        width: 100%;
+        background-color: #f0f0f0;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 60px 0px;
+    }
+    /* STYLES SPECIFIC TO FOOTER  */
+    .footer {
+        width: 100%;
+        position: relative;
+        height: auto;
+        background-color: #454545;
+    }
+
+    .mySlides h1 {
+        background-color: black;
+    }
+
+    .text a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
+    }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgba(255,255,255,0.2);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.250em;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .footer .col ul li {
+                color: #999999;
+                font-size: 14px;
+                font-family: inherit;
+                font-weight: bold;
+                padding: 5px 0px 5px 0px;
+                cursor: pointer;
+                transition: .2s;
+                -webkit-transition: .2s;
+                -moz-transition: .2s;
+            }
+
+    .social ul li {
+        display: inline-block;
+        padding-right: 5px !important;
+    }
+
+    .footer .col ul li:hover {
+        color: #ffffff;
+        transition: .1s;
+        -webkit-transition: .1s;
+        -moz-transition: .1s;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .contain {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: 1139px) {
+        .contain .social {
+            width: 1000px;
+            display: block;
+        }
+
+        .social h1 {
+            margin: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 950px) {
+        .footer .col {
+            width: 33%;
+        }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .footer .col {
+            width: 50%;
+        }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+    }
+
+    @media only screen and (max-width: 340px) {
+        .footer .col {
+            width: 100%;
+        }
+    }
+
+    ------------------------card--------------------
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+    #one, #two, #three {
+        /*  top:300%;*/
+        /* //text-align:center;*/
+        margin-top: 100px;
+        margin-left: 400px;
+    }
+
+    .disk {
+        background-image: url('images/bedimagee.png');
+        height: 500px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hoverbutton {
+        background-color: crimson;
+        color: white
+    }
+
+        .hoverbutton:hover {
+            background-color: white;
+            color: deeppink;
+            cursor: pointer;
+        }
+</style>
+
+<body>
+
+
+    <!--<ul>
+        <li><button>></button></li>
+
+
+
+
+        <li><button class="button1"><</button></li>
+    </ul>-->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!--<img src="images/80e26369732855743dd1a615d5f82f2d2e83e1b2-2849x1295.png" height="250" width="1000" />-->
+            <h1>.</h1>
+            <div class="text">
+
+                <a href="https://www.google.com/account/about/">Awarded to the Endy Mattress</a>
+
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <!--<img src="images/80e26369732855743dd1a615d5f82f2d2e83e1b2-2849x1295.png" height="250" width="1000" />-->
+            <h1>.</h1>
+            <div class="text"><a href="https://www.google.com/account/about/">The Endy Mattress was voted the most trusted</a></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <!--<img src="images/80e26369732855743dd1a615d5f82f2d2e83e1b2-2849x1295.png" height="250" width="1000" />-->
+            <h1>.</h1>
+            <div class="text"><a href="https://www.google.com/account/about/">‡The Endy Mattress was voted 'Best Mattress-in-a-Box</a></div>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">></button>
+        <button class="next" onclick="plusSlides(1)"><</button>
+        <!--<a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>-->
+
+    </div>
+    <br>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <div>
+
+        <li style="list-style-type:none">
+
+            <img src="images/80e26369732855743dd1a615d5f82f2d2e83e1b2-2849x1295.png" height="50px" width="100px" />
+        </li>
+
+        <li class="dropdown" style="list-style-type:none">
+            <a href="javascript:void(0)" class="dropbtn">Matress</a>
+            <div class="dropdown-content">
+                <a href="#">Bed      </a>
+                <a href="#">Matress</a>
+                <img src="images/80e26369732855743dd1a615d5f82f2d2e83e1b2-2849x1295.png" height="100px" width="100px" />
+
+
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">pillow</a>
+            <div class="dropdown-content">
+                <a href="#">Bedframes</a>
+                <a href="#">Careeers</a>
+                <a href="#">Donations</a>
+            </div>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Bedframes</a>
+            <div class="dropdown-content">
+                <a href="#">
+                    Our story
+                </a>
+                <a href="#">Careeers</a>
+
+                <a href="#">Donations</a>
+                <a href="#">Media</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Bedding</a>
+            <div class="dropdown-content">
+                <a href="#"> Our story</a>
+                <a href="#">Careeers</a>
+                <a href="#">Donations</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Decors</a>
+            <div class="dropdown-content">
+                <a href="#">Donations</a>
+                <a href="#">Careeers</a>
+                <a href="#">Our story</a>
+            </div>
+        </li>
+    </div>
+    <div>
+
+        <li style="list-style-type:none">
+            <img src="images/2acf743db578e74ef7934042432b1193341458f1-2048x1198.jpg" width="700" height="500" />
+            <img src="images/926ed10019106034a0b0b6cfbf8c9d199e1082e4-1536x600.jpg" width="500" height="500" />
+        </li>
+
+
+
+    </div>
+
+    <div>
+        <li " style="list-style-type:none">
+            <div class="container">
+                <img src="images2/p1.svg" height="300px" width="300px" />
+                <!--<img src="images/2edc5043deff04344dff9351a66d77b8137cfb77-330x176 (1).svg" height="300px" width="300px" />-->
+                <div class="overlay">Awarded to the Endy Mattress</div>
+            </div>
+        </li>
+
+        <li " style="list-style-type:none">
+            <div class="container">
+                <!--<img src="images/6dd73d7fdc73d0cb721465c71fa86762cd70017e-330x176 (1).svg" height="300px" width="300px" />-->
+                <img src="images2/p2.svg" height="300px" width="300px" />
+                <div class="overlay">The Endy Mattress was voted the most trusted Mattress-in-a-box brand by Canadian</div>
+            </div>
+        </li>
+
+
+        <li " style="list-style-type:none">
+            <div class="container">
+                <img src="images2/p3.svg" height="300px" width="300px" />
+                <!--<img src="images/fd359a50f040c4500fa353d0bc8d6563e9fa5d26-330x176 (1).svg" height="300px" width="300px" />-->
+                <div class="overlay">‡4.9 average star rating on the Endy Mattress</div>
+            </div>
+        </li>
+        <li " style="list-style-type:none">
+            <div class="container">
+                <img src="images2/p4.svg" height="300px" width="300px" />
+                <!--<img src="images/fd359a50f040c4500fa353d0bc8d6563e9fa5d26-330x176 (1).svg" / height="300px" width="300px">>-->
+                <div class="overlay">‡The Endy Mattress was voted 'Best Mattress-in-a-Box''</div>
+
+            </div>
+        </li>
+        <li>
+            <div>
+
+                <h1>------------Complete your Endy Collection----------------------</h1>
+            </div>
+        </li>
+        <div class="row">
+            <div class="col-sm-6">
+
+                <img src="images/349167ef8e3658904534383aba68106b80714ad3-1748x912.jpg" height="400" width="400" />
+                <img src="images/2f13afba713cc56e0fab19121450022aa8461647-594x300.jpg" height="400" width="400" />
+                <img src="images/a402568cc9cedfbb1fa0504a752b2d2afb86701f-594x300.jpg" height="400" width="400" />
+
+
+
+
+            </div>
+        </div>
+        <br />
+        <div>
+            <img src="images/img1.jpeg" height="400" width="1200" />
+        </div>
+        <br />
+        <div>
+            <img src="images/candi.png" style="margin-left: 150px; margin-right: 200px; margin-bottom:50px; margin-top: 0; box-shadow: 5px 10px #888888; " />
+        </div>
+
+        <div class="disk">
+
+            <h1 id="one">Take ur sleep</h1>
+            <h4 style="margin-left:400px">Fall in love with sleep again</h4>
+
+            <input type="button" class="hoverbutton" style="margin-left: 400px;padding:10px;border:none;border-radius:6px" value="Shop our collection" />
+
+        </div>
+
+
+        <div>
+
+        </div>
+        <div class="dummy_page">
+
+        </div>
+        <div>
+
+
+
+        </div>
+    </div>
+    <!-- FOOTER START -->
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>The Endy Matress</h1>
+                <ul>
+                    <li>pillow</li>
+                    <li>Solid wood Bed</li>
+                    <li>Matress Proctector</li>
+                    <li>The Collection</li>
+
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Reviews</h1>
+                <ul>
+                    <li>Our story</li>
+                    <li>Careeers</li>
+                    <li>Donations</li>
+                    <li>Media</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Contact us</h1>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Shipping</li>
+                    <li>Returns</li>
+                    <li>Trials</li>
+                    <li>Warrants</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li>Webmail</li>
+                    <li>Redeem code</li>
+                    <li>WHOIS lookup</li>
+                    <li>Site map</li>
+                    <li>Web templates</li>
+                    <li>Email templates</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Contact us</li>
+                    <li>Web chat</li>
+                    <li>Open ticket</li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+
+
+
+</body>
+</html>
+

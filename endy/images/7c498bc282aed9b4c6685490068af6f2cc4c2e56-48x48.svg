@@ -1,0 +1,14 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" height="48px" width="48px">
+    
+    <title>close-circle</title>
+    <desc>Created with Sketch.</desc>
+    <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="close-circle">
+        <g stroke-width="2" stroke="#243746" transform="translate(9.000000, 8.500000)" id="48x48-circle">
+            <circle r="15" cy="15.4466257" cx="15" id="Oval"></circle>
+            <g stroke-linecap="round" transform="translate(15.000000, 15.446626) rotate(45.000000) translate(-15.000000, -15.446626) translate(7.000000, 7.446626)" id="plus">
+                <path transform="translate(8.000000, 8.500212) scale(-1, 1) translate(-8.000000, -8.500212)" id="Path" d="M8.12189617,3.00021184 L8.12189617,13.0044426"></path>
+                <path id="Path" d="M12.9986304,8.00423074 L3,8.00423074"></path>
+            </g>
+        </g>
+    </g>
+</svg>
